@@ -42,12 +42,15 @@ public class Starter {
 		Magic.println(myDouble1 * myDouble2);
 		Magic.println(myDouble1 / myDouble2);
 		Magic.println(myInteger1 % myInteger2);
+		// These above handle and print out all the basic arithmetic
 		myInteger1 -= myInteger2;
 		Magic.println(myInteger1);
 		myDouble1 *= myDouble2;
 		Magic.println(myDouble1);
 		int myVar = 17;
 		myVar = myVar + 1;
+		// The "" text below does some explaining as the lab goes along, 
+		// to make sure the console isn't 100% gibberish 
 		Magic.println("The first of + 1's to myVar is " + myVar);
 		myVar = myVar + 1;
 		Magic.println("The second of + 1's to myVar is " + myVar);
@@ -60,11 +63,24 @@ public class Starter {
 		String favCereal = Magic.nextLine();
 		Magic.println("Oh wow, what a coincidence, I too like " + favCereal);
 		// 5. ARRAYS AND FILES
-		//int myArray[] = {3, -1, 4, 2, 10, -7};
-		//int arrayLength = myArray.length; 
-		//Magic.println("The length of this array is " + arrayLength); 
-		// I don't really understand how to do this mess,
-		//In the .txt file how do you even add an array for that mess
+		int myArray[] = {3, -1, 4, 2, 10, -7};
+		int arrayLength = myArray.length; 
+		Magic.println("The length of this array is " + arrayLength); 
+		// Creates a new array
+		int[] numbers = new int [5];
+		// Puts the values in the array
+		numbers[0] = 2;
+		numbers[1] = 18;
+		numbers[2] = 29;
+		numbers[3] = 999;
+		numbers[4] = 1248;
+		// Write these values to the .txt file
+		Magic.simpleIntFileWrite("myInts.txt", numbers);
+		//int[] newArray = Magic.simpleIntFileRead("myInts.txt");
+		//Magic.println(newArray[0]);
+		// Add up all of the numbers in the file to find the answer
+		//int total = newArray[0] + newArray[1] + newArray[2] + newArray[3];
+		//Magic.println(total);
 		// 6. DRAWING
 		// All of these are for various shapes
 		Magic.drawRectangle(100, 50, 20, 75, "Pink");

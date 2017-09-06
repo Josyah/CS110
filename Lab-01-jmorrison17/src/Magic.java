@@ -126,7 +126,7 @@ public class Magic {
 		return (new File(fileName)).isFile();
 	}
 
-	public static int[] simpleIntFileRead(String fileName){
+	public static int[] simpleIntFileRead(String fileName, int[] numbers){
 		int[] rtnArray=null;
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(fileName));
