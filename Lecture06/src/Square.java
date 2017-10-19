@@ -8,6 +8,8 @@ public class Square {
 	private int sideLength;
 	private String color;
 	
+	private static int numberOfSquares = 0; // keep track of squares (start at 0)
+	
 	public Square(int newX, int newY, int newSideLength, String newColor) {
 		// constructor 
 		// needs parameters for all of the class variables that I want to be able to define
@@ -15,6 +17,7 @@ public class Square {
 		y = newY;
 		sideLength = newSideLength;
 		color = newColor;
+		numberOfSquares ++; // everytime I create a square, the number of squares increases by one
 	}
 	
 	// create a method that draws our square
@@ -70,6 +73,15 @@ public class Square {
 	public String toString() {
 		String str = "The square with side length " + sideLength + " is at ( " + x + ", " + y + ") and is " + color + ".";
 		return str;
+	}
+	public boolean isSmallerThan(Square sq) {
+		int thisSquareSize = sideLength; // Side length of square that calls the method
+		int otherSquareSize = sq.sideLength; // this is the side length of the second square
+		return thisSquareSize < otherSquareSize; // true if thisSquareSize is smaller (false otherwise)
+	}
+	
+	public static int getNumberSquares() {
+		return numberOfSquares;
 	}
 	
 }
